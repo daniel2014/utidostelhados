@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,13 +10,12 @@
     <meta name="description" content="Construimos Telhados e Reformas em Policabornato, Trapezoidal, Cerâmico e Amianto. Estruturas de Alumínio, Madeira e Metálica - Orçamento sem compromisso!">
     <meta name="autor" content="Anderson Araujo - Técnico em Edificações">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-
-
+      
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">   
+      
   </head>
     
     
@@ -23,7 +25,7 @@
       
       <!-- Cabeçalho ------------------------------------------------------------------------------>
          
-          <div class="card text-center bg-dark rounded-0">                
+          <div id="inicio" class="card text-center bg-dark rounded-0">                
             <div class="card-body my-0 py-1">
               <h1 class="card-title d-inline font-weight-bold text-light my-0 py-0 text-custom-1">Converse Agora</h1> 
                 <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5511952112935" class="btn btn-primary py-0">
@@ -32,8 +34,7 @@
           </div>         
       
             
-          <!-- Bloco NavBar Menu -------------------------------------------------------------------->
-      <div class="navbar navbar-expand-md navbar-dark bg-primary" >
+          <!-- Bloco NavBar Menu --------------------------------------------------------------------> <div class="navbar navbar-expand-md navbar-dark bg-primary" > 
       
       <div class="mr-sm-5 pr-sm-4"></div>
                     
@@ -52,19 +53,41 @@
                   
                   <ul class="navbar-nav ml-auto pr-4 pl-4"> 
                       
-                      <li class="nav-item">
-                       <a class="btn btn-light bg-info text-light mr-1" href="#">Início</a>
+                      <li class="nav-item d-none d-md-block">
+                       <a class="scroll btn btn-light bg-info text-light mr-1" href="#inicio">Início</a>
                           
                       </li>
                       
-                      <li class="nav-item">
+                      <li class="nav-item d-none d-md-block">
+                       <a class="scroll btn btn-light bg-info text-light mr-1" href="#trabalhos">Trabalhos</a>
+                      </li> 
+                      
+                      <li class="nav-item d-none d-md-block">
+                       <a class="scroll btn btn-light bg-info text-light mr-1" href="#contato">Contato</a>
+                      </li>
+                      
+                      <li class="nav-item d-none d-md-block">
                        <a class="btn btn-light bg-info text-light mr-1" href="#">Sobre</a>
                       </li>             
                       
                       
-                      <li class="nav-item">
-                       <a class="btn btn-light bg-info text-light" href="#">Contato</a>
+                      
+                      
+                      <li class="nav-item d-md-none mt-5 pb-1">
+                       <a class="scroll btn btn-block btn-dark text-light mr-1" href="#inicio">Início</a>          
                       </li>
+                      
+                      <li class="nav-item d-md-none pb-1">
+                       <a class="scroll btn btn-block btn-dark text-light mr-1" href="#trabalhos">Trabalhos</a>
+                      </li>                     
+                      
+                      <li class="nav-item d-md-none pb-1">
+                       <a class="scroll btn btn-block btn-dark text-light" href="#contato">Contato</a>
+                      </li>
+                      
+                      <li class="nav-item d-md-none pb-1">
+                       <a class="btn btn-block btn-dark text-light mr-1" href="#">Sobre</a>
+                      </li>  
                       
                       <li class="nav-item dropdown invisible">
                        <a class="btn btn-light bg-info text-light dropdown-toggle text-danger mr-1
@@ -74,20 +97,18 @@
                               <a class="dropdown-item" href="#">Produto 01</a>
                               <div class="dropdown-divider"></div>
                               <a class="dropdown-item" href="#">Produto 01</a>
-                              <a class="dropdown-item" href="#">Produto 02</a>
-                              <a class="dropdown-item" href="#">Produto 03</a>
+                              <a class="dropdown-item" href="#">Produto 01</a>
+                              <a class="dropdown-item" href="#">Produto 01</a>
                           
                           </div>
-                      </li>
-                      
-                  </ul>                 
-                  
+                      </li>                      
+                  </ul>                  
               </div>          
           </div>  
       <!-- Bloco NavBar Menu ---------------------------------------------------------------------->
-      <header class="bg-dark pb-1">
+      <header class="bg-dark pb-1" alt="[Vídeo Telhado de Policabornato]">
           <div>
-              <video class="video-background d-none d-lg-block" autoplay controls >
+              <video class="video-background d-none d-lg-block" autoplay  controls>
                   <source src="assets/video/30/uti_dos_telhados_background/uti_dos_telhados_background.mp4">
                 
               </video>
@@ -108,7 +129,7 @@
         
              
    
-      <main>
+<main>
           
     <!-- Bloco Nossos Serviços ------------------------------------------------------------------->            
       <div class="text-center bg-secondary mt-2 mb-2 mx-lg-2">          
@@ -125,9 +146,9 @@
                           <i class="fas fa-business-time"></i>                          
                       </span>
                       
-                      <div class="card-body text-center">
-                          <h4 class="card-title text-light">ANOS DE EXPERIÊNCIA</h4>
-                          <p class="card-text text-light">Mais de 20 Anos de experiência em Reforma e Construção de Telhados.</p>
+                      <div class="card-body">
+                          <h4 class="card-title text-light">MUITOS ANOS DE EXPERIÊNCIA</h4>
+                          <p class="card-text text-light">Mais de 20 Anos de experiência em Reforma e Construção de Telhados em Geral.</p>
                       </div>
                   </div>              
               </div>
@@ -139,9 +160,9 @@
                           <i class="fas fa-calendar-alt"></i>
                       </span>
                       
-                      <div class="card-body text-center">
+                      <div class="card-body">
                           <h4 class="card-title text-light">TRABALHO EFICIENTE E RÁPIDO</h4>
-                          <p class="card-text text-light">Prezamos muito na eficiência, qualidade e rápidez do serviço.</p>
+                          <p class="card-text text-light">Prezamos muito na eficiência, qualidade e rápidez em nossos serviços.</p>                          
                       </div>
                   </div>              
               </div>   
@@ -153,7 +174,7 @@
                           <i class="fas fa-clipboard-list"></i>
                       </span>
                       
-                      <div class="card-body text-center">
+                      <div class="card-body">
                           <h4 class="card-title text-light">RELATÓRIO DETALHADO</h4>
                           <p class="card-text text-light">Todos os serviços executado recebe um relatótio descritivo na obra realizada.</p>                    
                       </div>
@@ -171,11 +192,13 @@
 
              <div class="carousel-inner">          
                   <div class="carousel-item active">
-                      <img class="d-block img-fluid" src="assets/img/Telhado_de_Barro.png" alt="Primeiro slide">
+                      <img class="d-block img-fluid" src="assets/img/Telhado_de_Ceramica.png" alt="Primeiro slide">
 
                       <div class="carousel-caption d-none d-md-block">
-
-                         <h2 class="invisible">Telhado de Cerâmica - UTI dos Telhados</h2>
+                        <article>
+                         <h2 class="invisible">Telhado de Cerâmica - UTI dos Telhados</h2>                          
+                          <p class="invisible">Maior Conforto Interno Qualidade e Resistência</p>
+                            </article>
 
                       </div>                  
                   </div> 
@@ -186,6 +209,7 @@
                       <div class="carousel-caption d-none d-md-block">
 
                          <h2 class="invisible">Telha Trapezoidal - UTI dos Telhados</h2>
+                          <p class="invisible">Maior Conforto Interno Qualidade e Resistência</p>
                         
                       </div>                  
                   </div>  
@@ -195,8 +219,8 @@
 
                       <div class="carousel-caption d-none d-md-block">
 
-                         <h2 class="invisible">Manta Térmica - UTI dos Telhados</h2>
-                          <p class="invisible">Maior conforto interno Qualidade e Resistência</p>
+                         <h2 class="invisible">Manta Termica - UTI dos Telhados</h2> 
+                          <p class="invisible">Maior Conforto Interno Qualidade e Resistência</p>
 
                       </div> 
 
@@ -205,7 +229,7 @@
 
           </div>
       <!-- Carrosel ----------------------------------------------------------------------------->
-<div class="bg-secondary pt-4 mx-lg-2">
+<div id="trabalhos" class="bg-secondary pt-4 mx-lg-2">
       <div class="container-fluid bg-secondary mb-4">
           <div class="text-center text-light"><h1>NOSSOS TRABALHO</h1></div>
       </div>
@@ -215,7 +239,7 @@
           <div class="row">
               <div class="col-sm-6 col-md-4 mb-4">
                   <div class="card border border-primary rounded-0">
-                      <img class="card-img-top" title="Telhado de Barro" alt="[Telhado de Barro]"  src="assets/img/Telhado-de-barro-UTI-dos-Telhados.jpeg">
+                      <img class="card-img-top" title="Telhado de Barro" alt="[Telhado de Cerâmica]"  src="assets/img/Telhado-de-barro-UTI-dos-Telhados.jpeg">
                       <div class="card-body text-center">
                           <h4 class="card-title">Telhado de Cerâmica</h4>
                           <p class="card-text"></p>
@@ -238,7 +262,7 @@
                       <img class="card-img-top" title="Telhado Trapezoidal" alt="[Telhado Trapezoidal]" src="assets/img/Telha-Trapezoida-UTI-dos-Telhados.jpeg">
                       <div class="card-body text-center">
                           <h4 class="card-title">Telhado Trapezoidal</h4>
-                          <p class="card-text"></p>
+                          <p class="card-text"></p>                         
                       </div>
                   </div>              
               </div>                 
@@ -271,17 +295,32 @@
                       <img class="card-img-top" title="Rufos e Calhas" alt="[Rufos e Calhas]" src="assets/img/Rufos-Calhas-UTI-dos-Telhados.jpeg">
                       <div class="card-body text-center">
                           <h4 class="card-title">Rufos e Calhas</h4>
-                          <p class="card-text"></p>
+                          <p class="card-text"></p>                         
                       </div>
                   </div>              
               </div>                 
 
           </div>
-      </div>
-       
+      </div>      
 </div>    
+      <!-- Card Serviços ------------------------------------------------------------------------>
     
-      <!-- Card Serviços ------------------------------------------------------------------------>    
+    
+    
+    
+<div class="jumbotron rounded-0 mt-2 mb-0 mx-2 pt-4 pb-5">
+      <div class="container text-center">
+          <h1 class="font-italic text-light">Telhado de Policarbonato</h1>
+          <article>
+              <h5 class="font-weight-light text-light mt-4 pb-3"><em>Com a mesma transparência do vidro, porém com a metade de seu peso e até 300 vezes mais resistente, as Placas de Policarbonato Compacto fornecem a solução ideal para ambientes onde se necessita de proteção, resistência e luminosidade natural, sem deixar de lado a beleza e design moderno.</em></h5>
+              <div class="container-fluid col-sm-10 col-lg-8">
+                  <img class="card-img-top" title="Telhado Trapezoidal" alt="[Telhado Trapezoidal]" src="assets/img/Trapezoidal-UTI-DOS_TELHADOS.jpg">
+
+              </div>
+         </article>
+      </div>
+</div>
+    
           
       
          <div class="jumbotron rounded-0 mt-2 mx-2 bg-dark pt-4 pb-5">
@@ -294,11 +333,11 @@
               </div>
           </div>
     
-      </main>           
+</main>           
           
       <footer>
-          <div class="container text-center pb-4">
-              <h1>Ligue Agora!</h1>
+          <div id="contato" class="container text-center pb-4">
+              <h1>Orçamento Gratuito!</h1>
               <h5>Fone: 11 4339-1229</h5>
               <h5>Cel: 11 9.5211-2935</h5>
               <h6>utidostelhados@gmail.com</h6>
@@ -322,6 +361,16 @@
     <script src="js/jquery.min.js"></script>    
     <script src="js/popper.min.js"></script>  
     <script src="js/bootstrap.min.js"></script>  
+    
+    <!-- Script JQuery de Rolagem da Página -->
+     <script>
+      jQuery(document).ready(function($) {
+       $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+       });
+      });
+     </script>  
   
       
   </body>
