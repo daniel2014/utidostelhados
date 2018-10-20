@@ -13,9 +13,6 @@
       
     <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="/css/bootstrap.css">
-      <link rel="stylesheet" href="/css/styles.css">
-
-
       
   </head>
     
@@ -338,12 +335,26 @@
 
 
 
+      <!-- Styles -->
+      <link rel="stylesheet" href="/css/styles.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
       
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Script JQuery de Rolagem da Página -->
+     <script>
+      jQuery(document).ready(function($) {
+       $(".scroll").click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+       });
+      });
+     </script>
       
       <!-- Script Menu Fixado com efeito
       <script>
